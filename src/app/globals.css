@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "highlight.js/styles/github-dark.css";
+
+@layer base {
+  body {
+    @apply bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-50 transition-colors duration-300;
+  }
+}
