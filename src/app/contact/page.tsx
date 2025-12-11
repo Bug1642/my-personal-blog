@@ -12,7 +12,7 @@ export default function ContactPage() {
             <div className="container mx-auto px-4 py-12 max-w-2xl">
                 <h1 className="text-4xl font-bold tracking-tighter mb-8">Message Sent!</h1>
                 <p className="text-zinc-600 dark:text-zinc-400">
-                    Thanks for reaching out. I'll get back to you as soon as possible.
+                    Thanks for reaching out. I&apos;ll get back to you as soon as possible.
                 </p>
             </div>
         );

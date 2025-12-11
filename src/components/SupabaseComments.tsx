@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { supabase } from "@/lib/supabase";
 
 interface Comment {
@@ -21,11 +21,7 @@ export default function SupabaseComments({ slug }: Props) {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
 
-    useEffect(() => {
-        fetchComments();
-    }, [slug]);
-
-    async function fetchComments() {
+    const fetchComments = useCallback(async () => {
         const { data, error } = await supabase
             .from("comments")
             .select("*")
@@ -37,7 +33,11 @@ export default function SupabaseComments({ slug }: Props) {
         } else {
             setComments(data || []);
         }
-    }
+    }, [slug]);
+
+    useEffect(() => {
+        fetchComments();
+    }, [fetchComments]);
 
     async function handleSubmit(e: React.FormEvent) {
         e.preventDefault();
