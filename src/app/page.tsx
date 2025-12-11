@@ -14,7 +14,7 @@ export default function Home() {
                     Creative Developer.
                 </h1>
                 <p className="text-xl text-zinc-600 dark:text-zinc-400 max-w-2xl mb-8">
-                    I'm Hasan, a software engineer passionate about building digital products that help people.
+                    I&apos;m Hasan, a software engineer passionate about building digital products that help people.
                     I write about code, design, and life.
                 </p>
                 <div className="flex gap-4">

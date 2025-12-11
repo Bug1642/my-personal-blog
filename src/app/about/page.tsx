@@ -10,12 +10,12 @@ export default function AboutPage() {
 
             <div className="prose prose-zinc dark:prose-invert">
                 <p className="text-lg text-zinc-600 dark:text-zinc-400 mb-6">
-                    Hello! I'm Hasancan Nişancı, a software engineer based in Bursa, Turkey. I enjoy creating things that live on the internet.
+                    Hello! I&apos;m Hasancan Nişancı, a software engineer based in Bursa, Turkey. I enjoy creating things that live on the internet.
                 </p>
 
                 <h2 className="text-2xl font-bold mb-4">Background</h2>
                 <p className="mb-6">
-                    I graduated from Anadolu University with a degree in Computer Programming. Since then, I've been working on various web development projects, focusing on frontend technologies like React and Next.js.
+                    I graduated from Anadolu University with a degree in Computer Programming. Since then, I&apos;ve been working on various web development projects, focusing on frontend technologies like React and Next.js.
                 </p>
 
                 <h2 className="text-2xl font-bold mb-4">Skills</h2>

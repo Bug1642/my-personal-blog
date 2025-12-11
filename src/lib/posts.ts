@@ -49,6 +49,11 @@ export function getPostBySlug(slug: string): Post | undefined {
             ...(data as { title: string; excerpt: string; date: string; tags: string[] }),
         };
     } catch (error) {
-        return undefined;
+        // Return undefined only if file doesn't exist
+        if ((error as NodeJS.ErrnoException).code === "ENOENT") {
+            return undefined;
+        }
+        // Re-throw other errors (e.g., parsing issues) to avoid silent failures
+        throw error;
     }
 }
